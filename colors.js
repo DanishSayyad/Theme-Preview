@@ -23,24 +23,25 @@ const palettes = [
     {name:"Modern Neutral", colors:["#FFFFFF","#374151","#9CA3AF","#F3F4F6"]},
     {name:"Blush Chic", colors:["#FFFBFE","#9D174D","#EC4899","#FBCFE8"]},
 
-    // 🟡 Yellow + Black
-    { name: "Golden Edge", colors: ["#FFD700", "#000000", "#FFF8DC", "#696969"] },
-    { name: "Neon Energy", colors: ["#FFEB3B", "#212121", "#FFFFFF", "#FF9800"] },
-    { name: "Luxury Yellow", colors: ["#F7C600", "#1A1A1A", "#E5E5E5", "#333333"] },
-    { name: "Cyber Glow", colors: ["#FFC107", "#000000", "#00E5FF", "#424242"] },
-    { name: "Bee Hive", colors: ["#FFDD00", "#101820", "#F2F2F2", "#757575"] },
+    // Yellow + Black (white background focus)
+    { name: "Golden Edge", colors: ["#FFFFFF", "#FFD700", "#000000", "#696969"] }, 
+    { name: "Neon Energy", colors: ["#FFFFFF", "#FFEB3B", "#000000", "#FF9800"] },
+    { name: "Luxury Yellow", colors: ["#FFFFFF", "#F7C600", "#000000", "#333333"] },
+    { name: "Cyber Glow", colors: ["#FFFFFF", "#FFC107", "#000000", "#00E5FF"] },
+    { name: "Bee Hive", colors: ["#FFFFFF", "#FFDD00", "#000000", "#101820"] },
 
-    // 🔴 Red + Black
-    { name: "Crimson Bold", colors: ["#E10600", "#000000", "#F5F5F5", "#333333"] },
-    { name: "Scarlet Luxe", colors: ["#D32F2F", "#121212", "#B71C1C", "#EEEEEE"] },
-    { name: "Red Inferno", colors: ["#FF0000", "#1C1C1C", "#FF6F61", "#2E2E2E"] },
-    { name: "Modern Gothic", colors: ["#B71C1C", "#000000", "#8B0000", "#D3D3D3"] },
-    { name: "Ruby Flame", colors: ["#C62828", "#212121", "#E53935", "#FAFAFA"] },
+    // Red + Black (white background focus)
+    { name: "Crimson Bold", colors: ["#FFFFFF", "#E10600", "#000000", "#333333"] },
+    { name: "Scarlet Luxe", colors: ["#FFFFFF", "#D32F2F", "#000000", "#B71C1C"] },
+    { name: "Red Inferno", colors: ["#FFFFFF", "#FF0000", "#000000", "#FF6F61"] },
+    { name: "Modern Gothic", colors: ["#FFFFFF", "#B71C1C", "#000000", "#8B0000"] },
+    { name: "Ruby Flame", colors: ["#FFFFFF", "#C62828", "#000000", "#E53935"] },
 
-    // 🔵🟢⚫ Blue + Green + Black
-    { name: "Ocean Tech", colors: ["#2196F3", "#4CAF50", "#000000", "#E0F7FA"] },
-    { name: "Cyber Wave", colors: ["#00B0FF", "#00C853", "#1C1C1C", "#ECEFF1"] },
-    { name: "Neon Stream", colors: ["#2979FF", "#00E676", "#101010", "#BDBDBD"] },
-    { name: "Aqua Glow", colors: ["#00E5FF", "#00C853", "#000000", "#B2FF59"] },
-    { name: "Matrix Vibes", colors: ["#00ACC1", "#2E7D32", "#000000", "#9E9E9E"] }
+    // Blue + Green + Black (white background focus)
+    { name: "Ocean Tech", colors: ["#FFFFFF", "#2196F3", "#000000", "#4CAF50"] },
+    { name: "Cyber Wave", colors: ["#FFFFFF", "#00B0FF", "#000000", "#00C853"] },
+    { name: "Neon Stream", colors: ["#FFFFFF", "#2979FF", "#000000", "#00E676"] },
+    { name: "Aqua Glow", colors: ["#FFFFFF", "#00E5FF", "#000000", "#00C853"] },
+    { name: "Matrix Vibes", colors: ["#FFFFFF", "#00ACC1", "#000000", "#2E7D32"] }
+
 ];
