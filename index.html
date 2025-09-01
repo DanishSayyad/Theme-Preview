@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Theme Preview</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --primary-color: #000000;
+      --accent-color: #6c63ff;
+      --support-color: #f8f9fa;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--primary-color);
+      transition: background 0.5s, color 0.5s;
+    }
+
+    header {
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--support-color);
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+
+    nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      color: var(--support-color);
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .btn {
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      border: none;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background-color: var(--accent-color);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      border: 2px solid var(--accent-color);
+      color: var(--accent-color);
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .card {
+      border: 1px solid var(--support-color);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      background-color: #fff;
+      transition: 0.3s;
+    }
+
+    .card h3 {
+      margin: 0.5rem 0;
+    }
+
+    .card p {
+      color: var(--support-color);
+    }
+
+    footer {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .palette-footer {
+      margin-bottom: 15px;
+    }
+
+    .credit-footer {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .author-link {
+      font-weight: bold;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .author-link:hover {
+      color: black;
+    }
+
+    .github-logo {
+      margin-left: 8px;
+      vertical-align: middle;
+      transition: fill 0.3s ease;
+    }
+
+    .github-logo:hover {
+      fill: black;
+    }
+
+    .palette-info {
+      margin-top: 0.5rem;
+      font-family: monospace;
+    }
+
+    .switch-btn {
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+      border: none;
+      border-radius: 20px;
+      background-color: var(--primary-color);
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>BagStore</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Discover Your Perfect Bag</h2>
+    <p>Stylish, modern, and functional bags crafted for every occasion. Explore our collection and find the bag that matches your lifestyle.</p>
+    <div class="buttons">
+      <button class="btn btn-primary">Shop Now</button>
+      <button class="btn btn-secondary">Learn More</button>
+    </div>
+  </section>
+
+  <section class="products">
+    <div class="card">
+      <h3>Tote Bag</h3>
+      <p>Everyday comfort with style.</p>
+      <button class="btn btn-primary">Buy</button>
+    </div>
+    <div class="card">
+      <h3>Backpack</h3>
+      <p>For work, travel, and beyond.</p>
+      <button class="btn btn-primary">Buy</button>
+    </div>
+    <div class="card">
+      <h3>Messenger Bag</h3>
+      <p>Sleek design for professionals.</p>
+      <button class="btn btn-primary">Buy</button>
+    </div>
+  </section>
+
+  <footer>
+  <div class="footer palette-footer">
+    <div>Palette <span id="paletteIndex">1</span> / 20 — <span id="paletteName"></span></div>
+    <div class="palette-info" id="paletteColors"></div>
+    <button class="switch-btn" onclick="switchPalette()">Switch Palette</button>
+  </div>
+
+  <div class="footer credit-footer">
+    <p>Website made by <a href="https://github.com/DanishSayyad/" target="_blank" class="author-link">Danish Sayyad</a>
+      <a href="https://github.com/DanishSayyad/" target="_blank">
+        <svg class="github-logo" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="grey" viewBox="0 0 24 24">
+          <path d="M12 .5C5.648.5.5 5.648.5 12c0 5.088 3.292 9.388 7.868 10.912.575.1.787-.25.787-.55 0-.275-.012-1.187-.012-2.162-3.212.7-3.888-1.362-3.888-1.362-.525-1.312-1.288-1.662-1.288-1.662-1.05-.712.075-.7.075-.7 1.163.087 1.775 1.188 1.775 1.188 1.025 1.762 2.688 1.25 3.35.95.1-.738.4-1.25.725-1.537-2.562-.288-5.263-1.275-5.263-5.675 0-1.25.45-2.275 1.188-3.075-.125-.287-.513-1.45.113-3.025 0 0 .962-.3 3.15 1.175.913-.25 1.9-.375 2.888-.375.987 0 1.975.125 2.888.375 2.188-1.475 3.15-1.175 3.15-1.175.625 1.575.238 2.738.113 3.025.738.8 1.188 1.825 1.188 3.075 0 4.412-2.7 5.387-5.275 5.675.413.362.775 1.075.775 2.175 0 1.575-.012 2.85-.012 3.237 0 .3.212.65.788.55C20.708 21.388 24 17.088 24 12c0-6.352-5.148-11.5-12-11.5z"/>
+        </svg>
+      </a>
+    </p>
+  </div>
+</footer>
+
+
+  <script>
+    const palettes = [
+      // Original 15
+      {name:"Teal & Coral", colors:["#F8F9FA","#008080","#FF6B6B","#FFD166"]},
+      {name:"Navy & Gold", colors:["#FFFFFF","#1E3A8A","#FBBF24","#E5E7EB"]},
+      {name:"Olive & Beige", colors:["#FAFAF5","#556B2F","#C2B280","#8FBC8F"]},
+      {name:"Turquoise & Orange", colors:["#F9FAFB","#0EA5E9","#F97316","#22C55E"]},
+      {name:"Black & Red", colors:["#FFFFFF","#000000","#E11D48","#6B7280"]},
+      {name:"Lavender & Charcoal", colors:["#F9FAFB","#6B7280","#A78BFA","#FBBF24"]},
+      {name:"Plum & Sand", colors:["#FFFFFF","#7C3AED","#F59E0B","#E5E7EB"]},
+      {name:"Violet & Teal", colors:["#F8F9FA","#5B21B6","#0D9488","#F97316"]},
+      {name:"Lilac & Rose", colors:["#FAFAFA","#C084FC","#F43F5E","#475569"]},
+      {name:"Indigo & Mint", colors:["#FFFFFF","#4338CA","#10B981","#F9A8D4"]},
+      {name:"Purple Base", colors:["#FFFFFF","#6C63FF","#212529","#F8F9FA"]},
+      {name:"Cool Blue Neutral", colors:["#FFFFFF","#374151","#60A5FA","#D1D5DB"]},
+      {name:"Green & Yellow", colors:["#FFFFFF","#1F2937","#34D399","#FDE68A"]},
+      {name:"Sky & Soft Red", colors:["#F8FAFC","#0F172A","#38BDF8","#FCA5A5"]},
+      {name:"Purple + Yellow Pop", colors:["#FAFAFA","#111827","#A855F7","#FACC15"]},
+
+      // 5 new shopping-oriented palettes
+      {name:"Minimal Luxe", colors:["#FFFFFF","#111827","#6B7280","#E5E7EB"]}, 
+      {name:"Warm Earth", colors:["#FAFAF5","#6B4226","#C68642","#EED9C4"]},
+      {name:"Urban Denim", colors:["#F9FAFB","#1E3A8A","#3B82F6","#93C5FD"]},
+      {name:"Modern Neutral", colors:["#FFFFFF","#374151","#9CA3AF","#F3F4F6"]},
+      {name:"Blush Chic", colors:["#FFFBFE","#9D174D","#EC4899","#FBCFE8"]}
+    ];
+
+    let current = 0;
+
+    function applyPalette(palette) {
+      document.documentElement.style.setProperty("--bg-color", palette.colors[0]);
+      document.documentElement.style.setProperty("--primary-color", palette.colors[1]);
+      document.documentElement.style.setProperty("--accent-color", palette.colors[2]);
+      document.documentElement.style.setProperty("--support-color", palette.colors[3]);
+      document.getElementById("paletteName").textContent = palette.name;
+      document.getElementById("paletteColors").textContent =
+        `BG: ${palette.colors[0]} | Primary: ${palette.colors[1]} | Accent: ${palette.colors[2]} | Support: ${palette.colors[3]}`;
+    }
+
+    function switchPalette() {
+      current = (current + 1) % palettes.length;
+      applyPalette(palettes[current]);
+      document.getElementById("paletteIndex").textContent = current + 1;
+    }
+
+    // init
+    applyPalette(palettes[current]);
+  </script>
+</body>
+</html>
