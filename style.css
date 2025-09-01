@@ -1,0 +1,154 @@
+:root {
+    --bg-color: #ffffff;
+    --primary-color: #000000;
+    --accent-color: #6c63ff;
+    --support-color: #f8f9fa;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    transition: background 0.5s, color 0.5s;
+}
+
+header {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--support-color);
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+nav a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    color: var(--support-color);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.card {
+    border: 1px solid var(--support-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+.card h3 {
+    margin: 0.5rem 0;
+}
+
+.card p {
+    color: var(--support-color);
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.palette-footer {
+    margin-bottom: 15px;
+}
+
+.credit-footer {
+    font-size: 14px;
+    color: #555;
+}
+
+.author-link {
+    font-weight: bold;
+    color: inherit;
+    text-decoration: none;
+}
+
+.author-link:hover {
+    color: black;
+}
+
+.github-logo {
+    margin-left: 8px;
+    vertical-align: middle;
+    transition: fill 0.3s ease;
+}
+
+.github-logo:hover {
+    fill: black;
+}
+
+.palette-info {
+    margin-top: 0.5rem;
+    font-family: monospace;
+}
+
+.switch-btn {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+}
